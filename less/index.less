@@ -4,6 +4,33 @@
    License: none (public domain)
 */
 
+// Variables
+
+// Background Colors
+@color1: rgb(184, 229, 209);
+@color2: rgb(211, 196, 227);
+@color3: rgb(108, 63, 158);
+@color4: #ffffff;
+
+// Fonts
+@font1: 'Oswald', sans-serif;
+@font2: 'IBM Plex Serif', serif;
+
+// CSS Mixins
+.center {
+	display: flex;
+	justify-content: center;
+}
+.middle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nav-text {
+	color: gray;
+	font-size: 1.5rem;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,6 +81,112 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.container {
+	width: 95%;
+	display: flex;
+	flex-wrap: wrap;
+
+	// Navigation
+	.navigation {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		margin: 3% 1%;
+	
+		a {
+			text-decoration: none;
+			.nav-text();
+			padding: 0.5rem;
+		}
+	}
+
+	// Header 1
+	.first, .second, .third {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	#name {
+		width: 58%;
+		background-color: @color1;
+		.middle();
+		flex-direction: column;
+		padding: 3rem;
+
+		h1 {
+			font-size: 4.2rem;
+			font-family: @font1;
+			color: @color3;
+			font-weight: 600;
+		}
+
+		h2 {
+			font-family: @font2;
+			color: @color4;
+			text-align: center;
+			font-size: 2rem;
+			padding: 1.3rem;
+		}
+	}
+	#contact {
+		width: 40%;
+		background-color: @color2;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		p {
+			line-height: 2;
+			color: @color4;
+			font-size: 1.2rem;
+		}
+	}
+
+	// Header 2
+	.second, .third {
+		margin-top: 1rem;
+	}
+	.experience {
+		width: 49%;
+		.middle();
+		padding: 3rem;
+		background-color: @color2;
+		font-family: @font1;
+		color: @color4;
+		font-size: 2rem;
+		padding: 1.3rem;
+		font-weight: 600;
+	}
+	.education {
+		width: 49%;
+		.middle();
+		padding: 3rem;
+		background-color: @color1;
+		font-family: @font1;
+		color: @color3;
+		font-size: 2rem;
+		padding: 1.3rem;
+		font-weight: 600;
+	}
+
+	// Header 3
+	.skills {
+		width: 40%;
+		middle();
+		padding: 3rem;
+		background-color: @color1;
+	}
+	.awards {
+		width: 58%;
+		middle();
+		padding: 3rem;
+		background-color: @color2;
+	}
 }
 

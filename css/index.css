@@ -2,6 +2,19 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+.center {
+  display: flex;
+  justify-content: center;
+}
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-text {
+  color: gray;
+  font-size: 1.5rem;
+}
 html,
 body,
 div,
@@ -133,4 +146,101 @@ table {
 html,
 body {
   height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .navigation {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 3% 1%;
+}
+.container .navigation a {
+  text-decoration: none;
+  color: gray;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.container .first,
+.container .second,
+.container .third {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.container #name {
+  width: 58%;
+  background-color: #b8e5d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+}
+.container #name h1 {
+  font-size: 4.2rem;
+  font-family: 'Oswald', sans-serif;
+  color: #6c3f9e;
+  font-weight: 600;
+}
+.container #name h2 {
+  font-family: 'IBM Plex Serif', serif;
+  color: #ffffff;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1.3rem;
+}
+.container #contact {
+  width: 40%;
+  background-color: #d3c4e3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container #contact p {
+  line-height: 2;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+.container .second,
+.container .third {
+  margin-top: 1rem;
+}
+.container .experience {
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background-color: #d3c4e3;
+  font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 1.3rem;
+  font-weight: 600;
+}
+.container .education {
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background-color: #b8e5d1;
+  font-family: 'Oswald', sans-serif;
+  color: #6c3f9e;
+  font-size: 2rem;
+  padding: 1.3rem;
+  font-weight: 600;
+}
+.container .skills {
+  width: 40%;
+}
+.container .awards {
+  width: 58%;
 }
