@@ -53,7 +53,285 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+// Variables
+
+// Background Colors
+@color1: rgb(184, 229, 209);
+@color2: rgb(211, 196, 227);
+@color3: rgb(108, 63, 158);
+@color4: #FFFFFF;
+@color5: #696969;
+
+// Fonts
+@font1: 'Oswald', sans-serif;
+@font2: 'IBM Plex Serif', serif;
+@bodyFont: 1.2rem;
+@bodyWeight: 700;
+@bodyLineHeight: 1.4;
+@bodyLIMargin: 1.2rem;
+
+// Escaped Values
+@phone: ~'(max-width: 500px)';
+
+// CSS Mixins
+.center {
+	display: flex;
+	justify-content: center;
 }
+.middle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.boxFlex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.nav-text {
+	color: gray;
+	font-size: 1.5rem;
+}
+
+
+html, body {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.container {
+	width: 95%;
+	display: flex;
+	flex-wrap: wrap;
+
+	// Navigation
+	.navigation {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		margin: 2% 1%;
+
+		@media @phone {
+			display: flex;
+			justify-content: space-evenly;
+			padding: 2rem;
+		}
+	
+		a {
+			text-decoration: none;
+			.nav-text();
+			padding: 0.5rem;
+		}
+	}
+
+	// Section 1
+	.first, .second, .third {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		@media @phone {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+	}
+	#name {
+		width: 58%;
+		background-color: @color1;
+		.middle();
+		flex-direction: column;
+		padding: 3rem;
+
+		@media @phone {
+			width: 100%;
+			margin-bottom: 1rem;
+		}
+
+		h1 {
+			font-size: 4.2rem;
+			font-family: @font1;
+			color: @color3;
+			font-weight: 600;
+			text-align: center;
+		}
+
+		h2 {
+			font-family: @font2;
+			color: @color4;
+			text-align: center;
+			font-size: 2rem;
+			padding: 1.3rem;
+		}
+	}
+	#contact {
+		width: 40%;
+		background-color: @color2;
+		.boxFlex();
+
+		@media @phone {
+			width: 100%;
+		}
+
+		p {
+			line-height: 2;
+			color: @color4;
+			font-size: @bodyFont;
+			font-weight: @bodyWeight;
+		}
+	}
+
+	// Section 2
+	.second, .third {
+		margin-top: 1rem;
+	}
+	.experience {
+		width: 49%;
+		.boxFlex();
+		padding: 3rem;
+		background-color: @color2;
+		font-family: @font1;
+		padding: 1.3rem;
+
+		@media @phone {
+			width: 100%;
+			margin-bottom: 1rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 600;
+			margin-bottom: 1rem;
+			color: @color4;
+		}
+
+		ul {
+			.boxFlex();
+			color: @color5;
+			text-align: center;
+
+			li {
+				font-size: @bodyFont;
+				font-weight: @bodyWeight;
+				line-height: @bodyLineHeight;
+			}
+
+			li:nth-child(even) {
+				font-size: 0.8rem;
+				margin-bottom: @bodyLIMargin;
+			}
+		}
+	}
+	.education {
+		width: 49%;
+		.boxFlex();
+		padding: 3rem;
+		background-color: @color1;
+		font-family: @font1;
+		color: @color3;
+		padding: 1.3rem;
+
+		@media @phone {
+			width: 100%;
+		}
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 600;
+			margin-bottom: 1rem;
+		}
+
+		ul {
+			.boxFlex();
+			color: @color5;
+
+			li {
+				font-size: @bodyFont;
+				font-weight: @bodyWeight;
+				line-height: @bodyLineHeight;
+			}
+
+			li:nth-child(even) {
+				font-size: 0.8rem;
+				margin-bottom: @bodyLIMargin;
+			}
+		}
+	}
+
+	// Section 3
+	.third {
+		margin-bottom: 1rem;
+	}
+	.skills {
+		width: 40%;
+		.boxFlex();
+		padding: 3rem;
+		background-color: @color1;
+		padding: 3rem;
+		background-color: @color1;
+		font-family: @font1;
+		color: @color3;
+		font-size: 2rem;
+		padding: 1.3rem;
+		font-weight: 600;
+
+		@media @phone {
+			width: 100%;
+			margin-bottom: 1rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 600;
+			margin-bottom: 1rem;
+		}
+
+		ul {
+			.boxFlex();
+			color: @color5;
+
+			li {
+				font-size: @bodyFont;
+				font-weight: @bodyWeight;
+				line-height: 2.3rem;
+			}
+
+			// li:nth-child(even) {
+			// 	font-size: 0.8rem;
+			// 	margin-bottom: @bodyLIMargin;
+			// }
+		}
+	}
+	.intro {
+		width: 58%;
+		.boxFlex();
+		padding: 3rem;
+		background-color: @color2;
+		font-family: @font1;
+		font-size: 2rem;
+		padding: 1.3rem;
+		font-weight: 600;
+
+		@media @phone {
+			width: 100%;
+		}
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 600;
+			margin-bottom: 1rem;
+			color: @color4;
+		}
+
+		p {
+			font-size: @bodyFont;
+			line-height: @bodyLineHeight;
+			color: @color5;
+			max-width: 75%;
+			text-align: justify;
+		}
+	}
+} // this closes the container tag
 

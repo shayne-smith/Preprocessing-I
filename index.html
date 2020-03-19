@@ -6,6 +6,8 @@
 
   <title>My Resume</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="css/index.css">
 
   <!--[if lt IE 9]>
@@ -14,6 +16,77 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="container">
+    <header class="navigation">
+      <nav>
+        <a href="#">Home</a>
+        <a href="#intro">About</a>
+        <a href="#experience">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="first">
+      <header id="name">
+        <h1>Shayne Smith</h1>
+        <h2>Full Stack Web Developer</h2>
+      </header><!-- this closes the first header tag -->
+      <header id="contact">
+        <p>(502) 551 - 4483</p>
+        <p>shayne.m.smith@vanderbilt.edu</p>
+        <p>www.shaynesmith.io</p>
+      </header><!-- this closes the second header tag -->
+    </section><!-- this closes the first section tag -->
+
+    <section class="second">
+      <div class="experience">
+        <h2>Experience</h2>
+
+        <ul>
+          <li>Sterling Resume Services | Co-Founder & CEO</li>
+          <li>2017 - Present</li>
+          <li>Great Northern Building Products | Manufacturing Engineer</li>
+          <li>Summer 2015 & Fall 2016</li>
+          <li>Radioland | GPS Installation Technician</li>
+          <li>2011-2013</li>
+        </ul>
+      </div><!-- this closes the experience div tag -->
+      <div class="education">
+        <h2>Education and Training</h2>
+
+        <ul>
+          <li>Lambda School | Full Stack Web Development</li>
+          <li>2020</li>
+          <li>Vanderbilt University | Engineering Science</li>
+          <li>2012-2017</li>
+          <li>St. Xavier High School</li>
+          <li>2008-2012</li>
+        </ul>
+      </div><!-- this closes the education div tag -->
+    </section><!-- this closes the second section tag -->
+
+    <section class="third">
+      <div class="skills">
+        <h2>Skills</h2>
+
+        <ul>
+          <li>Full Stack Web Development</li>
+          <li>Front End</li>
+          <li>Back End</li>
+          <li>UI/UX</li>
+          <li>React</li>
+          <li>Redux</li>
+          <li>Node.js</li>
+        </ul>
+      </div><!-- this closes the skills div tag -->
+      <div class="intro">
+        <h2>Introduction</h2>
+
+        <p>
+          Professional Software Engineer with a year of intensive programming experience and leading a software team through Lambda School. Strong attention to detail that leads to crisp, clean, DRY code. Constantly problem-solving and learning new skills in order to stay up-to-date with the latest software trends. 
+        </p>
+      </div><!-- this closes the intro div tag -->
+    </section><!-- this closes the third section tag -->
+  </div>
 </body>
 </html>
