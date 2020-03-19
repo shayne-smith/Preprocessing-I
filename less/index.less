@@ -4,33 +4,6 @@
    License: none (public domain)
 */
 
-// Variables
-
-// Background Colors
-@color1: rgb(184, 229, 209);
-@color2: rgb(211, 196, 227);
-@color3: rgb(108, 63, 158);
-@color4: #ffffff;
-
-// Fonts
-@font1: 'Oswald', sans-serif;
-@font2: 'IBM Plex Serif', serif;
-
-// CSS Mixins
-.center {
-	display: flex;
-	justify-content: center;
-}
-.middle {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.nav-text {
-	color: gray;
-	font-size: 1.5rem;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -80,6 +53,39 @@ table {
     box-sizing: border-box;
 }
 
+// Variables
+
+// Background Colors
+@color1: rgb(184, 229, 209);
+@color2: rgb(211, 196, 227);
+@color3: rgb(108, 63, 158);
+@color4: #ffffff;
+
+// Fonts
+@font1: 'Oswald', sans-serif;
+@font2: 'IBM Plex Serif', serif;
+
+// CSS Mixins
+.center {
+	display: flex;
+	justify-content: center;
+}
+.middle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.boxFlex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.nav-text {
+	color: gray;
+	font-size: 1.5rem;
+}
+
 html, body {
 	height: 100%;
 	display: flex;
@@ -105,7 +111,7 @@ html, body {
 		}
 	}
 
-	// Header 1
+	// Section 1
 	.first, .second, .third {
 		width: 100%;
 		display: flex;
@@ -136,10 +142,7 @@ html, body {
 	#contact {
 		width: 40%;
 		background-color: @color2;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		.boxFlex();
 
 		p {
 			line-height: 2;
@@ -148,24 +151,55 @@ html, body {
 		}
 	}
 
-	// Header 2
+	// Section 2
 	.second, .third {
 		margin-top: 1rem;
 	}
 	.experience {
 		width: 49%;
-		.middle();
+		.boxFlex();
 		padding: 3rem;
 		background-color: @color2;
 		font-family: @font1;
 		color: @color4;
-		font-size: 2rem;
 		padding: 1.3rem;
-		font-weight: 600;
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 600;
+			margin-bottom: 1rem;
+		}
+
+		ul {
+			.boxFlex();
+		}
 	}
 	.education {
 		width: 49%;
+		.boxFlex();
+		padding: 3rem;
+		background-color: @color1;
+		font-family: @font1;
+		color: @color3;
+		padding: 1.3rem;
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 600;
+			margin-bottom: 1rem;
+		}
+
+		ul {
+			.boxFlex();
+		}
+	}
+
+	// Section 3
+	.skills {
+		width: 40%;
 		.middle();
+		padding: 3rem;
+		background-color: @color1;
 		padding: 3rem;
 		background-color: @color1;
 		font-family: @font1;
@@ -174,19 +208,16 @@ html, body {
 		padding: 1.3rem;
 		font-weight: 600;
 	}
-
-	// Header 3
-	.skills {
-		width: 40%;
-		middle();
-		padding: 3rem;
-		background-color: @color1;
-	}
 	.awards {
 		width: 58%;
-		middle();
+		.middle();
 		padding: 3rem;
 		background-color: @color2;
+		font-family: @font1;
+		color: @color4;
+		font-size: 2rem;
+		padding: 1.3rem;
+		font-weight: 600;
 	}
 }
 
