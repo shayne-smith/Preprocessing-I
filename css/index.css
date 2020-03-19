@@ -164,7 +164,14 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  margin: 3% 1%;
+  margin: 2% 1%;
+}
+@media (max-width: 500px) {
+  .container .navigation {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+  }
 }
 .container .navigation a {
   text-decoration: none;
@@ -179,6 +186,15 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .container .first,
+  .container .second,
+  .container .third {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
 .container #name {
   width: 58%;
   background-color: #b8e5d1;
@@ -188,15 +204,22 @@ body {
   flex-direction: column;
   padding: 3rem;
 }
+@media (max-width: 500px) {
+  .container #name {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
 .container #name h1 {
   font-size: 4.2rem;
   font-family: 'Oswald', sans-serif;
   color: #6c3f9e;
   font-weight: 600;
+  text-align: center;
 }
 .container #name h2 {
   font-family: 'IBM Plex Serif', serif;
-  color: #ffffff;
+  color: #FFFFFF;
   text-align: center;
   font-size: 2rem;
   padding: 1.3rem;
@@ -209,10 +232,16 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .container #contact {
+    width: 100%;
+  }
+}
 .container #contact p {
   line-height: 2;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 1.2rem;
+  font-weight: 700;
 }
 .container .second,
 .container .third {
@@ -227,19 +256,36 @@ body {
   padding: 3rem;
   background-color: #d3c4e3;
   font-family: 'Oswald', sans-serif;
-  color: #ffffff;
   padding: 1.3rem;
+}
+@media (max-width: 500px) {
+  .container .experience {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 .container .experience h2 {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: #FFFFFF;
 }
 .container .experience ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #696969;
+  text-align: center;
+}
+.container .experience ul li {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.container .experience ul li:nth-child(even) {
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
 }
 .container .education {
   width: 49%;
@@ -253,6 +299,11 @@ body {
   color: #6c3f9e;
   padding: 1.3rem;
 }
+@media (max-width: 500px) {
+  .container .education {
+    width: 100%;
+  }
+}
 .container .education h2 {
   font-size: 2rem;
   font-weight: 600;
@@ -263,10 +314,24 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #696969;
+}
+.container .education ul li {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.container .education ul li:nth-child(even) {
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+.container .third {
+  margin-bottom: 1rem;
 }
 .container .skills {
   width: 40%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 3rem;
@@ -277,16 +342,57 @@ body {
   padding: 1.3rem;
   font-weight: 600;
 }
-.container .awards {
+@media (max-width: 500px) {
+  .container .skills {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+.container .skills h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.container .skills ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #696969;
+}
+.container .skills ul li {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 2.3rem;
+}
+.container .intro {
   width: 58%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 3rem;
   background-color: #d3c4e3;
   font-family: 'Oswald', sans-serif;
-  color: #ffffff;
   font-size: 2rem;
   padding: 1.3rem;
   font-weight: 600;
+}
+@media (max-width: 500px) {
+  .container .intro {
+    width: 100%;
+  }
+}
+.container .intro h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+.container .intro p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #696969;
+  max-width: 75%;
+  text-align: justify;
 }
